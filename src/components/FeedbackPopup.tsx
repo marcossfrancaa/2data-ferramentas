@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { X, Send, MessageSquare } from 'lucide-react';
+import emailjs from '@emailjs/browser';
+import { EMAILJS_CONFIG } from '@/config/emailjs';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -35,25 +37,31 @@ export const FeedbackPopup: React.FC<FeedbackPopupProps> = ({ isOpen, onClose })
     setIsSubmitting(true);
 
     try {
-      const response = await fetch('http://localhost:3001/api/send-feedback', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
+      // Configuração do EmailJS
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        subject: formData.subject,
+        message: formData.message,
+        to_email: 'marcos.chacrao@gmail.com'
+      };
 
-      if (response.ok) {
-        toast({
-          title: "Feedback enviado!",
-          description: "Obrigado pelo seu feedback. Entraremos em contato em breve.",
-        });
-        setFormData({ name: '', email: '', subject: '', message: '' });
-        onClose();
-      } else {
-        throw new Error('Erro ao enviar feedback');
-      }
+      // Enviar email usando EmailJS
+      await emailjs.send(
+        EMAILJS_CONFIG.SERVICE_ID,
+        EMAILJS_CONFIG.TEMPLATE_ID,
+        templateParams,
+        EMAILJS_CONFIG.PUBLIC_KEY
+      );
+
+      toast({
+        title: "Feedback enviado!",
+        description: "Obrigado pelo seu feedback. Entraremos em contato em breve.",
+      });
+      setFormData({ name: '', email: '', subject: '', message: '' });
+      onClose();
     } catch (error) {
+      console.error('Erro ao enviar email:', error);
       toast({
         title: "Erro ao enviar",
         description: "Ocorreu um erro ao enviar seu feedback. Tente novamente.",
