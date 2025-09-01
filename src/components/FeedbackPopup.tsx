@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { X, Send, MessageSquare } from 'lucide-react';
-import emailjs from '@emailjs/browser';
-import { EMAILJS_CONFIG } from '@/config/emailjs';
+// Removido EmailJS - usando FormSubmit que é mais simples
+// import emailjs from '@emailjs/browser';
+// import { EMAILJS_CONFIG } from '@/config/emailjs';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -37,29 +38,31 @@ export const FeedbackPopup: React.FC<FeedbackPopupProps> = ({ isOpen, onClose })
     setIsSubmitting(true);
 
     try {
-      // Configuração do EmailJS
-      const templateParams = {
-        from_name: formData.name,
-        from_email: formData.email,
-        subject: formData.subject,
-        message: formData.message,
-        to_email: 'marcos.chacrao@gmail.com'
-      };
+      // Usando FormSubmit - solução simples sem configuração
+      const formData2 = new FormData();
+      formData2.append('name', formData.name);
+      formData2.append('email', formData.email);
+      formData2.append('subject', formData.subject);
+      formData2.append('message', formData.message);
+      formData2.append('_next', window.location.href); // Redireciona de volta
+      formData2.append('_captcha', 'false'); // Desabilita captcha
+      formData2.append('_template', 'table'); // Template de email
 
-      // Enviar email usando EmailJS
-      await emailjs.send(
-        EMAILJS_CONFIG.SERVICE_ID,
-        EMAILJS_CONFIG.TEMPLATE_ID,
-        templateParams,
-        EMAILJS_CONFIG.PUBLIC_KEY
-      );
-
-      toast({
-        title: "Feedback enviado!",
-        description: "Obrigado pelo seu feedback. Entraremos em contato em breve.",
+      const response = await fetch('https://formsubmit.co/marcos.chacrao@gmail.com', {
+        method: 'POST',
+        body: formData2
       });
-      setFormData({ name: '', email: '', subject: '', message: '' });
-      onClose();
+
+      if (response.ok) {
+        toast({
+          title: "Feedback enviado!",
+          description: "Obrigado pelo seu feedback. Entraremos em contato em breve.",
+        });
+        setFormData({ name: '', email: '', subject: '', message: '' });
+        onClose();
+      } else {
+        throw new Error('Erro na resposta do servidor');
+      }
     } catch (error) {
       console.error('Erro ao enviar email:', error);
       toast({
