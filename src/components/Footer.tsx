@@ -2,15 +2,26 @@
 import { Shield, Database, Zap } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Separator } from '@/components/ui/separator';
+import { FeedbackPopup } from '@/components/FeedbackPopup';
+import { useState } from 'react';
 
 export const Footer = () => {
+  const [isFeedbackOpen, setIsFeedbackOpen] = useState(false);
+  
   const legalLinks = [
     { name: 'Sobre', path: '/sobre' },
     { name: 'Termos de Uso', path: '/termos-de-uso' },
     { name: 'Política de Privacidade', path: '/politica-de-privacidade' },
     { name: 'Política de Cookies', path: '/politica-de-cookies' },
-    { name: 'Contato', path: '/contato' }
+    { name: 'Contato', path: '/contato', isPopup: true }
   ];
+
+  const handleLinkClick = (link: any, e: React.MouseEvent) => {
+    if (link.isPopup) {
+      e.preventDefault();
+      setIsFeedbackOpen(true);
+    }
+  };
 
   return (
     <footer className="bg-gradient-card border-t border-border mt-auto">
@@ -67,12 +78,21 @@ export const Footer = () => {
           <div className="flex flex-wrap items-center justify-center gap-1 sm:gap-2 text-xs sm:text-sm text-muted-foreground">
             {legalLinks.map((link, index) => (
               <div key={link.path} className="flex items-center gap-1">
-                <Link 
-                  to={link.path}
-                  className="hover:text-primary transition-colors duration-200 px-2 py-1 rounded text-xs sm:text-sm"
-                >
-                  {link.name}
-                </Link>
+                {link.isPopup ? (
+                  <button
+                    onClick={(e) => handleLinkClick(link, e)}
+                    className="hover:text-primary transition-colors duration-200 px-2 py-1 rounded text-xs sm:text-sm cursor-pointer"
+                  >
+                    {link.name}
+                  </button>
+                ) : (
+                  <Link 
+                    to={link.path}
+                    className="hover:text-primary transition-colors duration-200 px-2 py-1 rounded text-xs sm:text-sm"
+                  >
+                    {link.name}
+                  </Link>
+                )}
                 {index < legalLinks.length - 1 && (
                   <Separator orientation="vertical" className="h-3 w-px bg-border/50" />
                 )}
@@ -95,6 +115,11 @@ export const Footer = () => {
           </div>
         </div>
       </div>
+      
+      <FeedbackPopup 
+        isOpen={isFeedbackOpen} 
+        onClose={() => setIsFeedbackOpen(false)} 
+      />
     </footer>
   );
 };

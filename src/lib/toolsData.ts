@@ -1,4 +1,10 @@
 // Lista organizada por categoria - fonte única da verdade para ferramentas
+export interface Tool {
+  id: string;
+  name: string;
+  description: string;
+}
+
 export const toolsByCategory = {
   'GERADORES': [
     { id: 'password-generator', name: 'Gerador de Senhas', description: 'Gere senhas seguras e personalizáveis' },

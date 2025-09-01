@@ -9,6 +9,7 @@ import { Mail, MessageSquare, Bug, Lightbulb, Github, ExternalLink, ArrowLeft } 
 import { useState } from 'react';
 import { useToast } from '@/hooks/use-toast';
 import { useNavigate } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
 const Contato = () => {
   const navigate = useNavigate();
@@ -47,6 +48,9 @@ const Contato = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <meta name="robots" content="noindex" />
+      </Helmet>
       <ModernHeader onSearch={() => {}} onToolSelect={() => {}} />
       
       <main className="container-responsive spacing-lg">

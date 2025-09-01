@@ -6,888 +6,882 @@
 
   <!-- Página Principal -->
   <url>
-    <loc>https://seudominio.com/</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
-  <!-- Página Sobre -->
-  <url>
-    <loc>https://seudominio.com/sobre</loc>
-    <lastmod>2024-01-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
+
 
   <!-- GERADORES -->
   <url>
-    <loc>https://seudominio.com/ferramenta/password-generator</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/password-generator</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/qr-generator</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/qr-generator</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/hash-generator</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/hash-generator</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/cpf-generator</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/cpf-generator</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/cnpj-generator</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/cnpj-generator</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/uuid-generator</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/uuid-generator</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/pix-generator</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/pix-generator</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/names-generator</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/names-generator</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/nick-generator</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/nick-generator</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/random-number-generator</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/random-number-generator</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/email-generator</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/email-generator</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/temporary-email</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/temporary-email</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/credit-card-generator</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/credit-card-generator</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/lorem-generator</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/lorem-generator</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/cron-generator</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/cron-generator</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/cnh-generator</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/cnh-generator</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/rg-generator</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/rg-generator</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/favicon-generator</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/favicon-generator</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/json-generator</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/json-generator</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/pis-generator</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/pis-generator</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/vehicle-generator</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/vehicle-generator</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/license-plate-generator</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/license-plate-generator</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/whatsapp-generator</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/whatsapp-generator</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/barcode-generator</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/barcode-generator</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/gradient-generator</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/gradient-generator</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/css-generator</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/css-generator</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/color-picker</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/color-picker</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/meta-tag-generator</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/meta-tag-generator</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/roman-numeral-converter</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/roman-numeral-converter</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/lottery-generator</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/lottery-generator</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/tracking-code-generator</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/tracking-code-generator</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/color-palette-generator</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/color-palette-generator</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/email-signature-generator</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/email-signature-generator</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/bank-account-generator</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/bank-account-generator</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/company-generator</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/company-generator</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/person-generator</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/person-generator</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/renavam-generator</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/renavam-generator</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/state-registration-generator</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/state-registration-generator</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/voter-title-generator</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/voter-title-generator</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/ssh-key-generator</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/ssh-key-generator</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/security-key-generator</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/security-key-generator</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/certificate-generator</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/certificate-generator</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/lorem-picsum-generator</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/lorem-picsum-generator</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/wifi-qr-generator</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/wifi-qr-generator</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/custom-card-generator</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/custom-card-generator</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <!-- VALIDADORES -->
   <url>
-    <loc>https://seudominio.com/ferramenta/cpf-validator</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/cpf-validator</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/cnpj-validator</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/cnpj-validator</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/credit-card-validator</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/credit-card-validator</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/json-validator</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/json-validator</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/cnh-validator</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/cnh-validator</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/pis-validator</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/pis-validator</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/rg-validator</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/rg-validator</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/voter-title-validator</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/voter-title-validator</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/nfc-validator</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/nfc-validator</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/boleto-validator</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/boleto-validator</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/password-strength</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/password-strength</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/bank-account-validator</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/bank-account-validator</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/renavam-validator</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/renavam-validator</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/certificate-validator</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/certificate-validator</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <!-- CALCULADORAS -->
   <url>
-    <loc>https://seudominio.com/ferramenta/calculator</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/calculator</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/age-calculator</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/age-calculator</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/percentage-calculator</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/percentage-calculator</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/compound-interest-calculator</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/compound-interest-calculator</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/simple-interest-calculator</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/simple-interest-calculator</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/mortgage-calculator</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/mortgage-calculator</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/bmi-calculator</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/bmi-calculator</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/tip-calculator</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/tip-calculator</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/date-calculator</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/date-calculator</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/work-contract-calculator</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/work-contract-calculator</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/vacation-calculator</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/vacation-calculator</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/discount-calculator</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/discount-calculator</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <!-- CONVERSORES -->
   <url>
-    <loc>https://seudominio.com/ferramenta/color-converter</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/color-converter</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/currency-converter</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/currency-converter</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/temperature-converter</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/temperature-converter</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/base64-converter</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/base64-converter</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/url-encoder</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/url-encoder</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/html-encoder</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/html-encoder</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/number-base-converter</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/number-base-converter</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/unit-converter</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/unit-converter</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/timestamp-converter</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/timestamp-converter</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/text-case</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/text-case</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/text-to-html-converter</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/text-to-html-converter</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/number-to-text-converter</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/number-to-text-converter</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/csv-to-json-converter</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/csv-to-json-converter</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/geocoding-converter</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/geocoding-converter</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/json-formatter</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/json-formatter</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/file-size-converter</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/file-size-converter</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/image-converter</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/image-converter</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <!-- CONSULTAS -->
   <url>
-    <loc>https://seudominio.com/ferramenta/cep-lookup</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/cep-lookup</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/cnpj-lookup</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/cnpj-lookup</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/ddd-lookup</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/ddd-lookup</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/fipe-lookup</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/fipe-lookup</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/bank-lookup</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/bank-lookup</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/cpf-origin-lookup</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/cpf-origin-lookup</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/bin-lookup</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/bin-lookup</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/holiday-lookup</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/holiday-lookup</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/cnae-lookup</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/cnae-lookup</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <!-- PRODUTIVIDADE -->
   <url>
-    <loc>https://seudominio.com/ferramenta/todo-list</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/todo-list</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/project-time-calculator</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/project-time-calculator</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/quick-notes</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/quick-notes</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/markdown-editor</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/markdown-editor</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/pomodoro-timer</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/pomodoro-timer</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/stopwatch</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/stopwatch</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/world-clock</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/world-clock</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/word-counter</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/word-counter</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/text-diff</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/text-diff</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/alphabetical-sorter</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/alphabetical-sorter</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/word-occurrence-counter</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/word-occurrence-counter</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/text-cutter</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/text-cutter</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/string-splitter</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/string-splitter</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/text-reverser</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/text-reverser</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/accent-remover</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/accent-remover</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/line-break-remover</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/line-break-remover</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/duplicate-line-remover</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/duplicate-line-remover</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/find-and-replace</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/find-and-replace</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/text-case-converter</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/text-case-converter</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/upside-down-text</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/upside-down-text</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/email-separator</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/email-separator</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/synonym-generator</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/synonym-generator</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <!-- FERRAMENTAS WEB -->
   <url>
-    <loc>https://seudominio.com/ferramenta/phone-generator</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/phone-generator</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/country-info</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/country-info</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/link-shortener</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/link-shortener</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/metadata-remover</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/metadata-remover</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/web-playground</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/web-playground</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/regex-tester</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/regex-tester</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/jwt-decoder</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/jwt-decoder</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/api-tester</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/api-tester</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/image-optimizer</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/image-optimizer</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/ip-info</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/ip-info</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/ip-lookup</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/ip-lookup</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/dns-lookup</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/dns-lookup</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/dns-propagation-checker</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/dns-propagation-checker</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/qr-reader</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/qr-reader</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/password-hasher</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/password-hasher</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/hash-checker</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/hash-checker</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/ssl-checker</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/ssl-checker</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/speed-test</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/speed-test</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/sql-formatter</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/sql-formatter</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/character-info</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/character-info</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/browser-info</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/browser-info</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/system-info</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/system-info</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/ping-latency-test</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/ping-latency-test</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://seudominio.com/ferramenta/domain-lookup</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://2data.com.br/ferramenta/domain-lookup</loc>
+    <lastmod>2025-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

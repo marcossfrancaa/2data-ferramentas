@@ -138,6 +138,7 @@ yarn dev
 4. **Acesse o projeto**
 - Local: http://localhost:8080
 - Rede: http://192.168.x.x:8080
+- Produção: https://2data.com.br
 
 ## 🏗️ Scripts Disponíveis
 

@@ -4,12 +4,17 @@ import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Shield, Eye, Lock, Database, ArrowLeft } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
 const PoliticaPrivacidade = () => {
   const navigate = useNavigate();
 
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <meta name="robots" content="noindex, nofollow" />
+        <title>Política de Privacidade - 2Data Brasil</title>
+      </Helmet>
       <ModernHeader onSearch={() => {}} onToolSelect={() => {}} />
       
       <main className="container-responsive spacing-lg">

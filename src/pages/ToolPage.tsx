@@ -1,10 +1,16 @@
 import { useParams, Navigate } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { ModernSidebar } from '@/components/ModernSidebar';
 import { ToolContainer } from '@/components/ToolContainer';
 import { ModernHeader } from '@/components/ModernHeader';
 import { Footer } from '@/components/Footer';
 import { ThemeProvider } from '@/hooks/use-theme';
+import { SEOHead } from '@/components/SEOHead';
+import { getToolSEO, generateStructuredData } from '@/lib/seoData';
+import { generateStructuredData as generateToolStructuredData } from '@/lib/searchConsole';
+import { toolsByCategory } from '@/lib/toolsData';
+import { trackPageView } from '@/lib/analytics';
+import { gtmTrackPageView } from '@/lib/gtm';
 
 const ToolPage = () => {
   const { toolId } = useParams<{ toolId: string }>();
@@ -19,8 +25,46 @@ const ToolPage = () => {
     setSearchQuery(query);
   };
 
+  // Encontrar dados da ferramenta
+  const findTool = () => {
+    for (const category of Object.values(toolsByCategory)) {
+      const tool = category.find(t => t.id === toolId);
+      if (tool) return tool;
+    }
+    return null;
+  };
+
+  const currentTool = findTool();
+  const seoData = getToolSEO(toolId || '');
+
+  // Rastrear visualização da página da ferramenta
+  useEffect(() => {
+    if (toolId) {
+      const fullPath = `/ferramenta/${toolId}`;
+      trackPageView(fullPath);
+      gtmTrackPageView(fullPath);
+    }
+  }, [toolId]);
+
+  // Gerar dados estruturados específicos para a ferramenta
+  const toolStructuredData = currentTool ? generateToolStructuredData('tool', {
+    id: toolId || '',
+    name: currentTool.name,
+    description: currentTool.description,
+    category: currentTool.category || 'FERRAMENTAS'
+  }) : null;
+
   return (
     <ThemeProvider defaultTheme="system" storageKey="devtools-theme">
+      {currentTool && seoData && (
+        <SEOHead
+          title={seoData.title}
+          description={seoData.description}
+          keywords={seoData.keywords}
+          canonicalUrl={`https://2data.com.br/ferramenta/${toolId}`}
+          structuredData={toolStructuredData ? [toolStructuredData] : generateStructuredData(toolId, currentTool.name, currentTool.description)}
+        />
+      )}
       <div className="min-h-screen bg-background">
         <ModernSidebar 
           selectedTool={toolId} 

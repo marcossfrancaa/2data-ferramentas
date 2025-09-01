@@ -1,5 +1,7 @@
 import { HomePage } from './HomePage';
 import { ResponsiveLayout } from './ResponsiveLayout';
+import { ToolContent } from './ToolContent';
+import { toolsByCategory } from '@/lib/toolsData';
 import { WordCounter } from './tools/WordCounter';
 import { PasswordGenerator } from './tools/PasswordGenerator';
 import { LinkShortener } from './tools/LinkShortener';
@@ -148,6 +150,17 @@ interface ToolContainerProps {
 }
 
 export const ToolContainer = ({ toolId }: ToolContainerProps) => {
+  // Encontrar dados da ferramenta
+  const findTool = () => {
+    for (const category of Object.values(toolsByCategory)) {
+      const tool = category.find(t => t.id === toolId);
+      if (tool) return tool;
+    }
+    return null;
+  };
+
+  const currentTool = findTool();
+
   const toolContent = (() => {
     switch (toolId) {
       case 'home':
@@ -159,7 +172,13 @@ export const ToolContainer = ({ toolId }: ToolContainerProps) => {
       case 'word-counter':
         return <ResponsiveLayout><WordCounter /></ResponsiveLayout>;
       case 'password-generator':
-        return <ResponsiveLayout><PasswordGenerator /></ResponsiveLayout>;
+        return currentTool ? (
+          <ResponsiveLayout>
+            <ToolContent toolId={toolId} toolName={currentTool.name} toolDescription={currentTool.description}>
+              <PasswordGenerator />
+            </ToolContent>
+          </ResponsiveLayout>
+        ) : <ResponsiveLayout><PasswordGenerator /></ResponsiveLayout>;
       case 'link-shortener':
         return <ResponsiveLayout><LinkShortener /></ResponsiveLayout>;
       case 'whatsapp-generator':
@@ -200,7 +219,13 @@ export const ToolContainer = ({ toolId }: ToolContainerProps) => {
       case 'sql-formatter':
         return <ResponsiveLayout><SqlFormatter /></ResponsiveLayout>;
       case 'qr-generator':
-        return <ResponsiveLayout><QrGenerator /></ResponsiveLayout>;
+        return currentTool ? (
+          <ResponsiveLayout>
+            <ToolContent toolId={toolId} toolName={currentTool.name} toolDescription={currentTool.description}>
+              <QrGenerator />
+            </ToolContent>
+          </ResponsiveLayout>
+        ) : <ResponsiveLayout><QrGenerator /></ResponsiveLayout>;
       case 'calculator':
         return <ResponsiveLayout><Calculator /></ResponsiveLayout>;
       case 'color-converter':
@@ -224,7 +249,13 @@ export const ToolContainer = ({ toolId }: ToolContainerProps) => {
       case 'text-diff':
         return <ResponsiveLayout><TextDiff /></ResponsiveLayout>;
       case 'cpf-generator':
-        return <ResponsiveLayout><CpfGenerator /></ResponsiveLayout>;
+        return currentTool ? (
+          <ResponsiveLayout>
+            <ToolContent toolId={toolId} toolName={currentTool.name} toolDescription={currentTool.description}>
+              <CpfGenerator />
+            </ToolContent>
+          </ResponsiveLayout>
+        ) : <ResponsiveLayout><CpfGenerator /></ResponsiveLayout>;
       case 'cnpj-generator':
         return <ResponsiveLayout><CnpjGenerator /></ResponsiveLayout>;
       case 'uuid-generator':

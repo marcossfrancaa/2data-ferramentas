@@ -1,14 +1,75 @@
+# Site On Fire - Ferramentas Online
+# https://2data.com.br
+
+# Google Search Console
 User-agent: Googlebot
 Allow: /
+Crawl-delay: 1
 
+# Bing Webmaster Tools
 User-agent: Bingbot
 Allow: /
+Crawl-delay: 1
 
+# Social Media Crawlers
 User-agent: Twitterbot
 Allow: /
 
 User-agent: facebookexternalhit
 Allow: /
 
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+# General crawlers
 User-agent: *
 Allow: /
+Crawl-delay: 2
+
+# Disallow sensitive areas
+Disallow: /admin/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /node_modules/
+Disallow: /.git/
+Disallow: /src/
+Disallow: /build/
+Disallow: /dist/
+Disallow: /temp/
+Disallow: /tmp/
+Disallow: /*.json$
+Disallow: /*.log$
+Disallow: /*.env$
+
+# Disallow legal pages from indexing
+Disallow: /sobre
+Disallow: /contato
+Disallow: /termos-de-uso
+Disallow: /politica-de-privacidade
+Disallow: /politica-de-cookies
+
+# Allow important files
+Allow: /sitemap.xml
+Allow: /robots.txt
+Allow: /favicon.ico
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.gif$
+Allow: /*.svg$
+Allow: /*.webp$
+Allow: /*.ico$
+Allow: /*.woff$
+Allow: /*.woff2$
+Allow: /*.ttf$
+
+# Sitemaps
+Sitemap: https://2data.com.br/sitemap.xml
+
+# Host (preferred domain)
+Host: https://2data.com.br
