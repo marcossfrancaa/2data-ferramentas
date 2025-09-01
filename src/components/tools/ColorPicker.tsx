@@ -272,7 +272,7 @@ export const ColorPicker = () => {
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
             Color Picker
-            <Button onClick={shareColor} size="sm" variant="outline">
+            <Button onClick={shareColor} size="sm" variant="outline" className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 hover:from-blue-500/20 hover:to-purple-500/20 border-gradient">
               <Share2 className="h-4 w-4 mr-2" />
               Compartilhar
             </Button>

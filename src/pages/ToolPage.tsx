@@ -70,7 +70,7 @@ const ToolPage = () => {
     id: toolId || '',
     name: currentTool.name,
     description: currentTool.description,
-    category: currentTool.category || 'FERRAMENTAS'
+    category: 'FERRAMENTAS'
   }) : null;
 
   return (

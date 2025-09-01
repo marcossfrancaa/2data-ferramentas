@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Separator } from '@/components/ui/separator';
 import { ScrollArea } from '@/components/ui/scroll-area';
-import { Mail, RefreshCw, Copy, Inbox, Clock, User, QrCode, ExternalLink, Download, Link, Languages } from 'lucide-react';
+import { Mail, RefreshCw, Copy, Inbox, Clock, User, QrCode, ExternalLink, Download, Link } from 'lucide-react';
 import { toast } from '@/hooks/use-toast';
 
 interface Email {
@@ -30,46 +30,12 @@ interface EmailContentProps {
 }
 
 const EmailContent = ({ content }: EmailContentProps) => {
-  const [translatedContent, setTranslatedContent] = useState<string>('');
-  const [isTranslating, setIsTranslating] = useState(false);
-  const [showTranslation, setShowTranslation] = useState(false);
-
   const copyToClipboard = (text: string) => {
     navigator.clipboard.writeText(text);
     toast({
       title: "Copiado!",
       description: "Texto copiado para a área de transferência"
     });
-  };
-
-  const translateContent = async () => {
-    setIsTranslating(true);
-    try {
-      // Remove HTML para obter texto limpo
-      const tempDiv = document.createElement('div');
-      tempDiv.innerHTML = content;
-      const textContent = tempDiv.textContent || tempDiv.innerText || '';
-      
-      // Simular tradução (em uma implementação real, você usaria um serviço de tradução)
-      // Por enquanto, vamos apenas mostrar uma mensagem indicando que a tradução seria feita
-      const translatedText = `[TRADUÇÃO AUTOMÁTICA]\n\n${textContent}\n\n[Esta funcionalidade requer integração com um serviço de tradução como Google Translate API]`;
-      
-      setTranslatedContent(translatedText);
-      setShowTranslation(true);
-      
-      toast({
-        title: "Tradução concluída!",
-        description: "Conteúdo traduzido para português brasileiro"
-      });
-    } catch (error) {
-      toast({
-        title: "Erro na tradução",
-        description: "Não foi possível traduzir o conteúdo",
-        variant: "destructive"
-      });
-    } finally {
-      setIsTranslating(false);
-    }
   };
 
   // Converte o HTML em componente React com links destacados
@@ -129,30 +95,6 @@ const EmailContent = ({ content }: EmailContentProps) => {
       <div className="flex gap-2 mb-4 flex-wrap">
         <Button
           variant="outline"
-          onClick={translateContent}
-          disabled={isTranslating}
-          size="sm"
-        >
-          {isTranslating ? (
-            <RefreshCw className="h-4 w-4 mr-2 animate-spin" />
-          ) : (
-            <Languages className="h-4 w-4 mr-2" />
-          )}
-          {isTranslating ? "Traduzindo..." : "Traduzir para PT-BR"}
-        </Button>
-        
-        {showTranslation && (
-          <Button
-            variant="ghost"
-            onClick={() => setShowTranslation(false)}
-            size="sm"
-          >
-            Ver original
-          </Button>
-        )}
-        
-        <Button
-          variant="outline"
           onClick={() => {
             const tempDiv = document.createElement('div');
             tempDiv.innerHTML = content;
@@ -166,34 +108,9 @@ const EmailContent = ({ content }: EmailContentProps) => {
         </Button>
       </div>
 
-      {/* Conteúdo original ou traduzido */}
+      {/* Conteúdo original */}
       <div className="text-foreground leading-relaxed">
-        {showTranslation && translatedContent ? (
-          <div className="space-y-3">
-            <div className="p-4 bg-emerald-50 dark:bg-emerald-950/20 border border-emerald-200 dark:border-emerald-800 rounded-lg">
-              <div className="flex items-center justify-between mb-3">
-                <div className="flex items-center gap-2">
-                  <Languages className="h-4 w-4 text-emerald-600" />
-                  <span className="text-sm font-medium text-emerald-600">Tradução automática</span>
-                </div>
-                <Button
-                  variant="ghost"
-                  size="sm"
-                  onClick={() => copyToClipboard(translatedContent)}
-                  className="h-8"
-                >
-                  <Copy className="h-3 w-3 mr-1" />
-                  Copiar
-                </Button>
-              </div>
-              <div className="whitespace-pre-wrap text-foreground">
-                {translatedContent}
-              </div>
-            </div>
-          </div>
-        ) : (
-          processContent(content)
-        )}
+        {processContent(content)}
       </div>
     </div>
   );

@@ -4,10 +4,8 @@ import ReactGA from 'react-ga4';
 const GA_MEASUREMENT_ID = "G-2HQBK8YBQM"; // ID configurado para 2data.com.br
 
 export const initGA = () => {
-  if (typeof window !== 'undefined' && GA_MEASUREMENT_ID !== "G-XXXXXXXXXX") {
+  if (typeof window !== 'undefined' && GA_MEASUREMENT_ID && GA_MEASUREMENT_ID.startsWith('G-')) {
     ReactGA.initialize(GA_MEASUREMENT_ID, {
-      debug: process.env.NODE_ENV === 'development',
-      titleCase: false,
       gaOptions: {
         send_page_view: false // Controle manual do page view
       }

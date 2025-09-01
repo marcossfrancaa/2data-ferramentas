@@ -21,13 +21,13 @@ import {
 export const useAnalytics = () => {
   // Rastrear uso de ferramenta
   const trackTool = useCallback((toolId: string, action: string, value?: number) => {
-    trackToolUsage(toolId, action, value);
-    gtmTrackToolUsage(toolId, action, value);
+    trackToolUsage(toolId, action);
+    gtmTrackToolUsage(toolId, action);
   }, []);
 
   // Rastrear geração de dados
   const trackGeneration = useCallback((toolId: string, type: string, count?: number) => {
-    trackToolGeneration(toolId, type, count);
+    trackToolGeneration(toolId, count);
     gtmTrackEvent('generate', {
       tool_id: toolId,
       generation_type: type,
@@ -37,7 +37,7 @@ export const useAnalytics = () => {
 
   // Rastrear validação
   const trackValidation = useCallback((toolId: string, isValid: boolean, inputType?: string) => {
-    trackToolValidation(toolId, isValid, inputType);
+    trackToolValidation(toolId, isValid);
     gtmTrackEvent('validate', {
       tool_id: toolId,
       is_valid: isValid,
@@ -47,7 +47,7 @@ export const useAnalytics = () => {
 
   // Rastrear download
   const trackDownload = useCallback((toolId: string, fileType: string, fileSize?: number) => {
-    trackToolDownload(toolId, fileType, fileSize);
+    trackToolDownload(toolId, fileType);
     gtmTrackEvent('download', {
       tool_id: toolId,
       file_type: fileType,
@@ -57,7 +57,7 @@ export const useAnalytics = () => {
 
   // Rastrear cópia
   const trackCopy = useCallback((toolId: string, contentType: string, length?: number) => {
-    trackToolCopy(toolId, contentType, length);
+    trackToolCopy(toolId);
     gtmTrackEvent('copy', {
       tool_id: toolId,
       content_type: contentType,
@@ -67,7 +67,7 @@ export const useAnalytics = () => {
 
   // Rastrear busca
   const trackSearchAction = useCallback((query: string, results?: number, category?: string) => {
-    trackSearch(query, results, category);
+    trackSearch(query, results);
     gtmTrackEvent('search', {
       search_term: query,
       results_count: results,
@@ -86,13 +86,13 @@ export const useAnalytics = () => {
 
   // Rastrear conversão
   const trackConversionAction = useCallback((toolId: string, conversionType: string, value?: number) => {
-    trackConversion(toolId, conversionType, value);
-    gtmTrackConversion(toolId, conversionType, value);
+    trackConversion(conversionType, value);
+    gtmTrackConversion(conversionType, value);
   }, []);
 
   // Rastrear engajamento
   const trackEngagementAction = useCallback((action: string, category: string, label?: string, value?: number) => {
-    trackEngagement(action, category, label, value);
+    trackEngagement(action, category);
     gtmTrackEvent('engagement', {
       action: action,
       category: category,
@@ -103,7 +103,7 @@ export const useAnalytics = () => {
 
   // Rastrear erro
   const trackErrorAction = useCallback((toolId: string, errorType: string, errorMessage?: string) => {
-    trackError(toolId, errorType, errorMessage);
+    trackError(errorType, errorMessage || '');
     gtmTrackEvent('error', {
       tool_id: toolId,
       error_type: errorType,
@@ -113,7 +113,7 @@ export const useAnalytics = () => {
 
   // Rastrear performance
   const trackPerformanceAction = useCallback((toolId: string, metric: string, value: number, unit?: string) => {
-    trackPerformance(toolId, metric, value, unit);
+    trackPerformance(metric, value);
     gtmTrackEvent('performance', {
       tool_id: toolId,
       metric: metric,

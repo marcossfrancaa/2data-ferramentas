@@ -113,22 +113,17 @@ export const ToolShowcase = () => {
         onMouseLeave={() => setIsHovered(false)}
       >
         <div 
-          className="flex transition-transform duration-500 ease-out"
+          className="flex transition-transform duration-500 ease-out gap-4"
           style={{
-            transform: `translateX(-${currentIndex * (100 / currentToolsPerView)}%)`,
-            gap: currentToolsPerView === 1 ? '0' : currentToolsPerView === 2 ? '1rem' : '1.5rem'
+            transform: `translateX(-${currentIndex * (100 / currentToolsPerView)}%)`
           }}
         >
           {showcaseTools.map((tool, index) => (
             <div 
               key={tool.id}
-              className="flex-none"
+              className="flex-shrink-0"
               style={{
-                width: currentToolsPerView === 1 
-                  ? '100%' 
-                  : currentToolsPerView === 2 
-                    ? 'calc(50% - 0.5rem)' 
-                    : 'calc(33.333% - 1rem)'
+                width: `calc(${100 / currentToolsPerView}% - ${(currentToolsPerView - 1) * 16 / currentToolsPerView}px)`
               }}
             >
               <ToolCard tool={tool} />
