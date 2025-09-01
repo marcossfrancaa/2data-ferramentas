@@ -17,8 +17,10 @@ RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 # SPA ROUTING
 # ========================================
 # Redirecionar todas as rotas para index.html (React Router)
+# EXCETO arquivos PHP e outros recursos
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !\.(php|js|css|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot|json|xml|txt)$ [NC]
 RewriteRule . /index.html [L]
 
 # ========================================

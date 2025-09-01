@@ -30,17 +30,6 @@ export const PWAInstallPopup = () => {
     const handleBeforeInstallPrompt = (e: BeforeInstallPromptEvent) => {
       e.preventDefault();
       setDeferredPrompt(e);
-      
-      // Só mostra em mobile e se ainda não mostrou
-      const hasShownBefore = localStorage.getItem('pwa-install-popup-shown');
-      if (isMobile && !hasShownBefore && !hasShown) {
-        // Mostra após 15 segundos
-        setTimeout(() => {
-          setIsOpen(true);
-          setHasShown(true);
-          localStorage.setItem('pwa-install-popup-shown', 'true');
-        }, 15000);
-      }
     };
 
     window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt as EventListener);
@@ -48,6 +37,33 @@ export const PWAInstallPopup = () => {
     return () => {
       window.removeEventListener('beforeinstallprompt', handleBeforeInstallPrompt as EventListener);
     };
+  }, []);
+
+  // Mostrar popup após 30 segundos APENAS em mobile real
+  useEffect(() => {
+    const hasShownBefore = localStorage.getItem('pwa-install-popup-shown');
+    const lastShown = localStorage.getItem('pwa-install-popup-last-shown');
+    const oneDayAgo = Date.now() - (24 * 60 * 60 * 1000);
+    
+    // Detectar se é mobile REAL (não desktop em modo responsivo)
+    const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+    const isRealMobile = isMobile && (isMobileDevice || isTouchDevice) && window.innerWidth <= 768;
+    
+    // Mostrar se nunca mostrou ou se passou mais de 1 dia
+    const shouldShow = !hasShownBefore || (lastShown && parseInt(lastShown) < oneDayAgo);
+    
+    if (isRealMobile && shouldShow && !hasShown) {
+      // Mostra após 30 segundos
+      const timer = setTimeout(() => {
+        setIsOpen(true);
+        setHasShown(true);
+        localStorage.setItem('pwa-install-popup-shown', 'true');
+        localStorage.setItem('pwa-install-popup-last-shown', Date.now().toString());
+      }, 30000);
+
+      return () => clearTimeout(timer);
+    }
   }, [isMobile, hasShown]);
 
   const handleInstall = async () => {
@@ -77,28 +93,42 @@ export const PWAInstallPopup = () => {
 
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
-      <DialogContent className="sm:max-w-md mx-4">
+      <DialogContent className="sm:max-w-md mx-4 border-2 shadow-2xl w-[calc(100vw-2rem)] max-w-[400px]">
         <DialogHeader>
-          <DialogTitle className="flex items-center gap-2 text-xl">
-            <Smartphone className="h-6 w-6 text-blue-500" />
-            Instalar 2Data
+          <DialogTitle className="flex items-center gap-3 text-xl">
+            <div className="relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-green-500 rounded-full blur-sm opacity-50"></div>
+              <div className="relative bg-gradient-to-r from-blue-500 to-green-500 p-2 rounded-full">
+                <Smartphone className="h-6 w-6 text-white" />
+              </div>
+            </div>
+            <span className="bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">
+              Instalar 2Data
+            </span>
           </DialogTitle>
-          <DialogDescription className="text-base">
-            Instale o 2Data no seu celular para acesso rápido e offline!
+          <DialogDescription className="text-base text-center">
+            🚀 Instale o 2Data no seu celular para acesso instantâneo e offline!
           </DialogDescription>
         </DialogHeader>
         
         <div className="flex flex-col gap-4 py-4">
-          <div className="flex items-center justify-center p-6 bg-gradient-to-br from-blue-50 to-green-50 dark:from-blue-950/30 dark:to-green-950/30 rounded-lg border">
+          <div className="flex items-center justify-center p-6 bg-gradient-to-br from-blue-50 via-purple-50 to-green-50 dark:from-blue-950/30 dark:via-purple-950/30 dark:to-green-950/30 rounded-xl border-2 border-gradient-to-r from-blue-200 to-green-200 dark:from-blue-800 dark:to-green-800">
             <div className="text-center">
-              <div className="relative">
-                <Smartphone className="h-16 w-16 text-blue-500 mx-auto mb-3" />
-                <Download className="h-6 w-6 text-green-500 absolute -bottom-1 -right-1 bg-white dark:bg-gray-900 rounded-full p-1" />
+              <div className="relative mb-4">
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-green-400 rounded-2xl blur-lg opacity-30 animate-pulse"></div>
+                <div className="relative bg-gradient-to-r from-blue-500 to-green-500 p-4 rounded-2xl">
+                  <Smartphone className="h-12 w-12 text-white mx-auto" />
+                  <Download className="h-5 w-5 text-white absolute -bottom-1 -right-1 bg-gradient-to-r from-green-400 to-blue-400 rounded-full p-1 animate-bounce" />
+                </div>
               </div>
-              <p className="font-semibold text-lg mb-1">App Nativo</p>
-              <p className="text-sm text-muted-foreground">
-                Acesso rápido, notificações e uso offline
+              <p className="font-bold text-lg mb-2 bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">
+                ⚡ App Nativo ⚡
               </p>
+              <div className="space-y-1 text-sm text-muted-foreground">
+                <p>✨ Acesso instantâneo</p>
+                <p>📱 Interface otimizada</p>
+                <p>🔄 Funciona offline</p>
+              </div>
             </div>
           </div>
 
@@ -123,21 +153,22 @@ export const PWAInstallPopup = () => {
             </div>
           )}
           
-          <div className="flex gap-2">
+          <div className="flex gap-3">
             <Button 
               onClick={handleInstall}
-              className="flex-1"
+              className="flex-1 bg-gradient-to-r from-blue-500 to-green-500 hover:from-blue-600 hover:to-green-600 text-white shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
               size="lg"
             >
               <Download className="h-4 w-4 mr-2" />
-              {isIOSSafari ? 'Ver Instruções' : 'Instalar App'}
+              {isIOSSafari ? '📋 Ver Instruções' : '⬇️ Instalar App'}
             </Button>
             <Button 
               variant="outline" 
               onClick={handleClose}
               size="lg"
+              className="border-2 hover:bg-muted/50 transition-all duration-200"
             >
-              Agora Não
+              ⏰ Depois
             </Button>
           </div>
         </div>

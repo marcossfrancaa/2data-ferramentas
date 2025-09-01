@@ -1,0 +1,38 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="50%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+    <linearGradient id="icon" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#e5e7eb"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  
+  <!-- Logo/Icon -->
+  <circle cx="300" cy="315" r="80" fill="rgba(255,255,255,0.2)" stroke="rgba(255,255,255,0.3)" stroke-width="2"/>
+  <path d="M300 275 L325 290 L300 305 L275 290 Z" fill="white"/>
+  <rect x="280" y="315" width="40" height="6" rx="3" fill="white"/>
+  <rect x="285" y="325" width="30" height="6" rx="3" fill="white"/>
+  <rect x="290" y="335" width="20" height="6" rx="3" fill="white"/>
+  
+  <!-- Main Text -->
+  <text x="500" y="280" font-family="Arial, sans-serif" font-size="72" font-weight="bold" fill="white">2Data Brasil</text>
+  <text x="500" y="340" font-family="Arial, sans-serif" font-size="32" fill="white" opacity="0.9">Ferramentas Profissionais</text>
+  <text x="500" y="390" font-family="Arial, sans-serif" font-size="24" fill="white" opacity="0.8">Mais de 150 ferramentas gratuitas para desenvolvedores</text>
+  
+  <!-- Features -->
+  <rect x="500" y="420" width="120" height="30" rx="15" fill="rgba(255,255,255,0.2)"/>
+  <text x="560" y="440" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white" text-anchor="middle">✨ 100% Gratuito</text>
+  
+  <rect x="640" y="420" width="100" height="30" rx="15" fill="rgba(255,255,255,0.2)"/>
+  <text x="690" y="440" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white" text-anchor="middle">🇧🇷 Brasil</text>
+  
+  <rect x="760" y="420" width="120" height="30" rx="15" fill="rgba(255,255,255,0.2)"/>
+  <text x="820" y="440" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white" text-anchor="middle">⚡ Sem Limites</text>
+</svg>

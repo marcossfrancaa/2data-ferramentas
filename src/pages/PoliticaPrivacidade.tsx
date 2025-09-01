@@ -4,10 +4,16 @@ import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Shield, Eye, Lock, Database, ArrowLeft } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 
 const PoliticaPrivacidade = () => {
   const navigate = useNavigate();
+
+  // Scroll para o topo quando a página carrega
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
 
   return (
     <div className="min-h-screen bg-background">

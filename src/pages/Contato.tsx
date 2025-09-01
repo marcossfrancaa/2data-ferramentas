@@ -6,13 +6,19 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { Mail, MessageSquare, Bug, Lightbulb, Github, ExternalLink, ArrowLeft } from 'lucide-react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useToast } from '@/hooks/use-toast';
 import { useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 
 const Contato = () => {
   const navigate = useNavigate();
+  
+  // Scroll para o topo quando a página carrega
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
+  
   const [formData, setFormData] = useState({
     name: '',
     email: '',

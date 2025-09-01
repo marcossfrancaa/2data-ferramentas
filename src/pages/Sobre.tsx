@@ -4,10 +4,16 @@ import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Code, Users, Zap, Heart, ArrowLeft } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 
 const Sobre = () => {
   const navigate = useNavigate();
+
+  // Scroll para o topo quando a página carrega
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
 
   return (
     <div className="min-h-screen bg-background">
@@ -59,8 +65,8 @@ const Sobre = () => {
             </div>
             <p className="text-responsive-sm text-muted-foreground">
               Construído pela comunidade, para a comunidade. Todas as nossas 
-              ferramentas são open source e desenvolvidas com foco nas necessidades 
-              específicas do mercado brasileiro.
+              ferramentas são desenvolvidas com foco nas necessidades 
+              específicas do mercado brasileiro e totalmente gratuitas.
             </p>
           </Card>
 
@@ -100,7 +106,7 @@ const Sobre = () => {
             <span className="bg-primary/10 text-primary px-3 py-1 rounded-full">✨ +50 Ferramentas</span>
             <span className="bg-secondary/10 text-secondary px-3 py-1 rounded-full">🇧🇷 Foco no Brasil</span>
             <span className="bg-accent/10 text-accent px-3 py-1 rounded-full">🆓 100% Gratuito</span>
-            <span className="bg-success/10 text-success px-3 py-1 rounded-full">⚡ Open Source</span>
+            <span className="bg-success/10 text-success px-3 py-1 rounded-full">⚡ Sem Limites</span>
           </div>
         </Card>
       </main>

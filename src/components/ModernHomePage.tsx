@@ -5,6 +5,7 @@ import { Badge } from '@/components/ui/badge';
 import { Link } from 'react-router-dom';
 import { SEOHead } from '@/components/SEOHead';
 import { generateStructuredData } from '@/lib/searchConsole';
+import { useFavorites } from '@/contexts/FavoritesContext';
 import { 
   Code, 
   Hash, 
@@ -27,6 +28,7 @@ import {
 } from 'lucide-react';
 import { getTotalToolsCount, getCategoryCount } from '@/lib/toolsData';
 import { ToolShowcase } from './ToolShowcase';
+import { cn } from '@/lib/utils';
 
 const allTools = [
   { id: 'cpf-generator', name: 'Gerador CPF', icon: CreditCard, category: 'GERADORES', description: 'Gera CPFs válidos para testes' },
@@ -34,10 +36,25 @@ const allTools = [
   { id: 'cnpj-generator', name: 'Gerador CNPJ', icon: Globe, category: 'GERADORES', description: 'Gera CNPJs válidos para testes' },
   { id: 'password-generator', name: 'Gerador Senha', icon: Key, category: 'GERADORES', description: 'Senhas seguras personalizadas' },
   { id: 'qr-generator', name: 'Gerador QR Code', icon: QrCode, category: 'GERADORES', description: 'QR Codes personalizados' },
+  { id: 'temporary-email', name: 'E-mail Temporário', icon: Globe, category: 'GERADORES', description: 'E-mail descartável com GuerrillaMail' },
+  { id: 'hash-generator', name: 'Gerador Hash', icon: Hash, category: 'GERADORES', description: 'Gere hashes MD5, SHA1, SHA256' },
+  { id: 'uuid-generator', name: 'Gerador UUID', icon: Code, category: 'GERADORES', description: 'Identificadores únicos universais' },
   { id: 'cpf-validator', name: 'Validador CPF', icon: CreditCard, category: 'VALIDADORES', description: 'Valida CPFs brasileiros' },
   { id: 'cnpj-validator', name: 'Validador CNPJ', icon: Globe, category: 'VALIDADORES', description: 'Valida CNPJs brasileiros' },
+  { id: 'credit-card-validator', name: 'Validador Cartão', icon: CreditCard, category: 'VALIDADORES', description: 'Valide números de cartão de crédito' },
+  { id: 'json-validator', name: 'Validador JSON', icon: FileText, category: 'VALIDADORES', description: 'Valide e formate código JSON' },
+  { id: 'calculator', name: 'Calculadora', icon: Calculator, category: 'CALCULADORAS', description: 'Calculadora científica completa' },
+  { id: 'age-calculator', name: 'Calculadora Idade', icon: Calculator, category: 'CALCULADORAS', description: 'Calcule idade exata em anos, meses e dias' },
+  { id: 'bmi-calculator', name: 'Calculadora IMC', icon: Calculator, category: 'CALCULADORAS', description: 'Calcule seu Índice de Massa Corporal' },
   { id: 'color-converter', name: 'Conversor Cores', icon: Palette, category: 'CONVERSORES', description: 'Converte HEX, RGB, HSL' },
-  { id: 'json-formatter', name: 'Formatador JSON', icon: FileText, category: 'CONVERSORES', description: 'Formata e valida JSON' }
+  { id: 'json-formatter', name: 'Formatador JSON', icon: FileText, category: 'CONVERSORES', description: 'Formata e valida JSON' },
+  { id: 'base64-converter', name: 'Base64 Converter', icon: Code, category: 'CONVERSORES', description: 'Codifique e decodifique Base64' },
+  { id: 'temperature-converter', name: 'Conversor Temperatura', icon: Calculator, category: 'CONVERSORES', description: 'Converta entre Celsius, Fahrenheit, Kelvin' },
+  { id: 'cep-lookup', name: 'Consulta CEP', icon: Search, category: 'CONSULTAS', description: 'Busque endereços por CEP' },
+  { id: 'cnpj-lookup', name: 'Consulta CNPJ', icon: Globe, category: 'CONSULTAS', description: 'Dados da Receita Federal' },
+  { id: 'ddd-lookup', name: 'Consulta DDD', icon: Search, category: 'CONSULTAS', description: 'Consulte códigos de área' },
+  { id: 'fipe-lookup', name: 'Consulta FIPE', icon: Search, category: 'CONSULTAS', description: 'Preços de veículos pela tabela FIPE' },
+  { id: 'link-shortener', name: 'Encurtador de Link', icon: Globe, category: 'CONSULTAS', description: 'Encurte URLs longas' }
 ];
 
 interface ModernHomePageProps {
@@ -56,6 +73,7 @@ const allCategories = [
 export const ModernHomePage = ({ onToolSelect }: ModernHomePageProps) => {
   const [searchTerm, setSearchTerm] = useState('');
   const totalTools = getTotalToolsCount();
+  const { isFavorite, addFavorite, removeFavorite } = useFavorites();
 
   const handleCategoryClick = (categoryName: string) => {
     const categoryElement = document.getElementById(`category-${categoryName}`);
@@ -125,23 +143,30 @@ export const ModernHomePage = ({ onToolSelect }: ModernHomePageProps) => {
           </div>
 
           <div className="mb-8 sm:mb-10 md:mb-12 lg:mb-16 animate-scale-in">
-            <h2 className="title-h2 text-center">Explore por Categoria</h2>
-            <div className="grid grid-cols-3 gap-2 sm:gap-3 md:gap-4">
+            <h2 className="title-h2 text-center">
+              <button 
+                onClick={() => handleCategoryClick('GERADORES')}
+                className="hover:text-primary transition-colors duration-200 cursor-pointer"
+              >
+                Explore por Categoria
+              </button>
+            </h2>
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4 md:gap-6 px-4 sm:px-0">
               {allCategories.map((category, index) => {
                 const CategoryIcon = category.icon;
                 return (
                   <Card 
                     key={category.name} 
-                    className="category-card hover-lift cursor-pointer group bg-gradient-card border-border/50 shadow-soft hover:shadow-glow transition-all duration-300" 
+                    className="category-card hover-lift cursor-pointer group bg-gradient-card border-border/50 shadow-soft hover:shadow-glow transition-all duration-300 min-h-[120px] sm:min-h-[140px]" 
                     style={{ animationDelay: `${index * 0.1}s` }}
                     onClick={() => handleCategoryClick(category.name)}
                   >
-                    <div className="text-center h-full flex flex-col justify-center">
-                      <div className={`mx-auto w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-2xl bg-gradient-to-br ${category.color} p-2 sm:p-3 mb-2 sm:mb-3 group-hover:scale-110 transition-transform shadow-medium`}>
-                        <CategoryIcon className="w-6 h-6 sm:w-6 sm:h-6 md:w-8 md:h-8 text-white" />
+                    <div className="text-center h-full flex flex-col justify-center p-4 sm:p-5 md:p-6">
+                      <div className={`mx-auto w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-2xl bg-gradient-to-br ${category.color} p-2.5 sm:p-3 mb-3 sm:mb-4 group-hover:scale-110 transition-transform shadow-lg`}>
+                        <CategoryIcon className="w-7 h-7 sm:w-8 sm:h-8 md:w-10 md:h-10 text-white" />
                       </div>
-                      <h3 className="category-title px-1">{category.name}</h3>
-                      <p className="category-count">{category.count} ferramentas</p>
+                      <h3 className="font-bold text-sm sm:text-base md:text-lg text-card-foreground leading-tight mb-1">{category.name}</h3>
+                      <p className="text-xs sm:text-sm text-muted-foreground font-medium">{category.count} ferramentas</p>
                     </div>
                   </Card>
                 );
@@ -153,44 +178,52 @@ export const ModernHomePage = ({ onToolSelect }: ModernHomePageProps) => {
             <ToolShowcase />
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 lg:gap-6 animate-fade-in-up mb-8 sm:mb-10 md:mb-12 lg:mb-16">
-            <Card className="spacing-sm lg:spacing-md text-center bg-gradient-card border-border/50 shadow-soft hover:shadow-medium transition-all">
-              <div className="text-2xl lg:text-3xl font-bold text-primary mb-2">{totalTools}+</div>
-              <p className="text-xs lg:text-sm text-muted-foreground">Ferramentas</p>
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-3 lg:gap-6 animate-fade-in-up mb-8 sm:mb-10 md:mb-12 lg:mb-16">
+            <Card className="p-2 sm:p-3 lg:p-4 text-center bg-gradient-card border-border/50 shadow-soft hover:shadow-medium transition-all">
+              <div className="text-lg sm:text-2xl lg:text-3xl font-bold text-primary mb-1">{totalTools}+</div>
+              <p className="text-xs text-muted-foreground">Ferramentas</p>
             </Card>
-            <Card className="spacing-sm lg:spacing-md text-center bg-gradient-card border-border/50 shadow-soft hover:shadow-medium transition-all">
-              <div className="text-2xl lg:text-3xl font-bold text-success mb-2">100%</div>
-              <p className="text-xs lg:text-sm text-muted-foreground">Gratuito</p>
+            <Card className="p-2 sm:p-3 lg:p-4 text-center bg-gradient-card border-border/50 shadow-soft hover:shadow-medium transition-all">
+              <div className="text-lg sm:text-2xl lg:text-3xl font-bold text-success mb-1">100%</div>
+              <p className="text-xs text-muted-foreground">Gratuito</p>
             </Card>
-            <Card className="spacing-sm lg:spacing-md text-center bg-gradient-card border-border/50 shadow-soft hover:shadow-medium transition-all">
-              <div className="text-2xl lg:text-3xl font-bold text-secondary mb-2">24/7</div>
-              <p className="text-xs lg:text-sm text-muted-foreground">Disponível</p>
+            <Card className="p-2 sm:p-3 lg:p-4 text-center bg-gradient-card border-border/50 shadow-soft hover:shadow-medium transition-all">
+              <div className="text-lg sm:text-2xl lg:text-3xl font-bold text-secondary mb-1">24/7</div>
+              <p className="text-xs text-muted-foreground">Disponível</p>
             </Card>
-            <Card className="spacing-sm lg:spacing-md text-center bg-gradient-card border-border/50 shadow-soft hover:shadow-medium transition-all">
-              <div className="text-2xl lg:text-3xl font-bold text-accent mb-2">0</div>
-              <p className="text-xs lg:text-sm text-muted-foreground">Propagandas</p>
+            <Card className="p-2 sm:p-3 lg:p-4 text-center bg-gradient-card border-border/50 shadow-soft hover:shadow-medium transition-all">
+              <div className="text-lg sm:text-2xl lg:text-3xl font-bold text-accent mb-1">0</div>
+              <p className="text-xs text-muted-foreground">Propagandas</p>
             </Card>
           </div>
 
           <div className="text-center animate-fade-in-up">
             <Card className="spacing-md lg:spacing-lg bg-gradient-primary text-white border-0 shadow-glow max-w-3xl mx-auto">
-              <h2 className="title-h3 text-white mb-3 sm:mb-4">Pronto para começar?</h2>
+              <h2 className="title-h3 text-white mb-3 sm:mb-4">Ferramentas Profissionais</h2>
               <p className="text-white/90 mb-4 sm:mb-6 text-responsive-sm lg:text-base px-4">
-                Acesse todas as ferramentas gratuitamente, sem cadastro e sem limitações.
+                Todas as ferramentas que você precisa em um só lugar. Gratuito, rápido e sem limitações.
               </p>
-              <Link to="/ferramenta/password-generator">
-                <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-white/90 shadow-medium">
-                  <Sparkles className="w-5 h-5 mr-2" />
-                  Experimentar Agora
-                </Button>
-              </Link>
+              <div className="flex flex-wrap items-center justify-center gap-3 px-4">
+                <div className="flex items-center gap-2 bg-white/10 px-3 py-2 rounded-full backdrop-blur-sm">
+                  <CheckCircle className="w-4 h-4 text-white" />
+                  <span className="text-sm font-medium">Sem Cadastro</span>
+                </div>
+                <div className="flex items-center gap-2 bg-white/10 px-3 py-2 rounded-full backdrop-blur-sm">
+                  <Star className="w-4 h-4 text-white" />
+                  <span className="text-sm font-medium">Sem Limitações</span>
+                </div>
+                <div className="flex items-center gap-2 bg-white/10 px-3 py-2 rounded-full backdrop-blur-sm">
+                  <Sparkles className="w-4 h-4 text-white" />
+                  <span className="text-sm font-medium">Sempre Atualizado</span>
+                </div>
+              </div>
             </Card>
           </div>
 
-          <div className="mb-8 sm:mb-10 md:mb-12">
-            <h2 className="title-h2 text-center mb-6 sm:mb-8">Todas as Ferramentas</h2>
+          <div className="mb-8 sm:mb-10 md:mb-12 mt-12 sm:mt-16 lg:mt-20">
+            <h2 className="title-h2 text-center mb-8 sm:mb-10 lg:mb-12">Todas as Ferramentas</h2>
             
-            {['GERADORES', 'VALIDADORES', 'CONVERSORES'].map(category => {
+            {['GERADORES', 'VALIDADORES', 'CALCULADORAS', 'CONVERSORES', 'CONSULTAS'].map(category => {
               const categoryTools = allTools.filter(tool => tool.category === category);
               if (categoryTools.length === 0) return null;
 
@@ -204,24 +237,59 @@ export const ModernHomePage = ({ onToolSelect }: ModernHomePageProps) => {
                   <div className="tools-grid">
                     {categoryTools.map(tool => {
                       const ToolIcon = tool.icon;
+                      const isToolFavorite = isFavorite(tool.id);
+                      
+                      const handleFavoriteClick = (e: React.MouseEvent) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        
+                        if (isToolFavorite) {
+                          removeFavorite(tool.id);
+                        } else {
+                          addFavorite(tool.id);
+                        }
+                      };
+
                       return (
-                        <Link key={tool.id} to={`/ferramenta/${tool.id}`}>
-                          <Card className="spacing-sm hover:shadow-lg hover-lift cursor-pointer bg-gradient-card border-border/50">
-                            <div className="flex items-start gap-2 sm:gap-3">
-                              <div className="p-1.5 sm:p-2 bg-primary/10 rounded-lg flex-shrink-0">
-                                <ToolIcon className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
+                        <div key={tool.id} className="relative group">
+                          <Link to={`/ferramenta/${tool.id}`}>
+                            <Card className="spacing-sm hover:shadow-lg hover-lift cursor-pointer bg-gradient-card border-border/50">
+                              <div className="flex items-start gap-2 sm:gap-3">
+                                <div className="p-1.5 sm:p-2 bg-primary/10 rounded-lg flex-shrink-0">
+                                  <ToolIcon className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
+                                </div>
+                                <div className="flex-1 min-w-0">
+                                  <h4 className="font-medium text-card-foreground text-sm sm:text-base mb-1 truncate">
+                                    {tool.name}
+                                  </h4>
+                                  <p className="text-xs sm:text-sm text-muted-foreground line-clamp-2">
+                                    {tool.description}
+                                  </p>
+                                </div>
                               </div>
-                              <div className="flex-1 min-w-0">
-                                <h4 className="font-medium text-card-foreground text-sm sm:text-base mb-1 truncate">
-                                  {tool.name}
-                                </h4>
-                                <p className="text-xs sm:text-sm text-muted-foreground line-clamp-2">
-                                  {tool.description}
-                                </p>
-                              </div>
-                            </div>
-                          </Card>
-                        </Link>
+                            </Card>
+                          </Link>
+                          
+                          {/* Botão de favorito */}
+                          <Button
+                            variant="ghost"
+                            size="icon"
+                            onClick={handleFavoriteClick}
+                            className={cn(
+                              "absolute top-2 right-2 h-7 w-7 opacity-0 group-hover:opacity-100 transition-all duration-200 hover:scale-110 z-10",
+                              isToolFavorite && "opacity-100"
+                            )}
+                          >
+                            <Star 
+                              className={cn(
+                                "h-3.5 w-3.5 transition-all duration-200",
+                                isToolFavorite 
+                                  ? "fill-yellow-500 text-yellow-500" 
+                                  : "text-muted-foreground hover:text-yellow-500"
+                              )} 
+                            />
+                          </Button>
+                        </div>
                       );
                     })}
                   </div>

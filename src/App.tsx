@@ -5,6 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Routes, Route, useLocation } from "react-router-dom";
 import { CookieConsent } from "@/components/CookieConsent";
 import { HelmetProvider } from 'react-helmet-async';
+import { FavoritesProvider } from '@/contexts/FavoritesContext';
 import { initGA, trackPageView } from '@/lib/analytics';
 import { initGTM, gtmTrackPageView } from '@/lib/gtm';
 import { useEffect } from 'react';
@@ -64,7 +65,9 @@ const App = () => {
     <HelmetProvider>
       <QueryClientProvider client={queryClient}>
         <TooltipProvider>
-          <AppContent />
+          <FavoritesProvider>
+            <AppContent />
+          </FavoritesProvider>
         </TooltipProvider>
       </QueryClientProvider>
     </HelmetProvider>

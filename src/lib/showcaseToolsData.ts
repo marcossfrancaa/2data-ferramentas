@@ -14,7 +14,11 @@ import {
   Shield,
   Activity,
   Clock,
-  Binary
+  Binary,
+  LinkIcon,
+  Search,
+  MapPin,
+  Phone
 } from 'lucide-react';
 
 export interface ShowcaseTool {
@@ -23,7 +27,7 @@ export interface ShowcaseTool {
   description: string;
   icon: any;
   link: string;
-  animationType: 'cpf' | 'qrcode' | 'card' | 'hash' | 'password' | 'json' | 'color' | 'calculator';
+  animationType: 'cpf' | 'qrcode' | 'card' | 'hash' | 'password' | 'json' | 'color' | 'calculator' | 'email' | 'link' | 'cnpj' | 'cep';
   category: string;
   color: string;
 }
@@ -108,5 +112,65 @@ export const showcaseTools: ShowcaseTool[] = [
     animationType: 'calculator',
     category: 'CALCULADORAS',
     color: 'from-slate-500 to-gray-500'
+  },
+  {
+    id: 'temporary-email',
+    title: 'Email Temporário',
+    description: 'Gere emails temporários para cadastros e testes',
+    icon: Mail,
+    link: '/ferramenta/temporary-email',
+    animationType: 'email',
+    category: 'GERADORES',
+    color: 'from-rose-500 to-pink-500'
+  },
+  {
+    id: 'link-shortener',
+    title: 'Encurtador de Links',
+    description: 'Encurte links longos e acompanhe estatísticas',
+    icon: LinkIcon,
+    link: '/ferramenta/link-shortener',
+    animationType: 'link',
+    category: 'FERRAMENTAS WEB',
+    color: 'from-violet-500 to-purple-500'
+  },
+  {
+    id: 'cnpj-lookup',
+    title: 'Consultar CNPJ',
+    description: 'Consulte dados completos de empresas pelo CNPJ',
+    icon: Building2,
+    link: '/ferramenta/cnpj-lookup',
+    animationType: 'cnpj',
+    category: 'CONSULTAS',
+    color: 'from-emerald-500 to-teal-500'
+  },
+  {
+    id: 'cep-lookup',
+    title: 'Consultar CEP',
+    description: 'Consulte endereços completos pelo CEP',
+    icon: MapPin,
+    link: '/ferramenta/cep-lookup',
+    animationType: 'cep',
+    category: 'CONSULTAS',
+    color: 'from-sky-500 to-blue-500'
+  },
+  {
+    id: 'cnpj-generator',
+    title: 'Gerador de CNPJ',
+    description: 'Crie números de CNPJ válidos para testes',
+    icon: Building2,
+    link: '/ferramenta/cnpj-generator',
+    animationType: 'cnpj',
+    category: 'GERADORES',
+    color: 'from-lime-500 to-green-500'
+  },
+  {
+    id: 'ddd-lookup',
+    title: 'Consultar DDD',
+    description: 'Consulte cidades e estados pelo código DDD',
+    icon: Phone,
+    link: '/ferramenta/ddd-lookup',
+    animationType: 'cep',
+    category: 'CONSULTAS',
+    color: 'from-cyan-500 to-blue-500'
   }
 ];

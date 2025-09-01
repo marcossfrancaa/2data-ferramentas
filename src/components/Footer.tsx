@@ -74,27 +74,27 @@ export const Footer = () => {
 
       {/* Links legais */}
       <div className="border-t border-border bg-muted/20">
-        <div className="container-responsive py-2 sm:py-3">
-          <div className="flex flex-wrap items-center justify-center gap-1 sm:gap-2 text-xs sm:text-sm text-muted-foreground">
+        <div className="container-responsive py-2 sm:py-3 px-2">
+          <div className="flex flex-wrap items-center justify-center gap-1 text-xs text-muted-foreground">
             {legalLinks.map((link, index) => (
               <div key={link.path} className="flex items-center gap-1">
                 {link.isPopup ? (
                   <button
                     onClick={(e) => handleLinkClick(link, e)}
-                    className="hover:text-primary transition-colors duration-200 px-2 py-1 rounded text-xs sm:text-sm cursor-pointer"
+                    className="hover:text-primary transition-colors duration-200 px-1.5 py-1 rounded text-xs cursor-pointer whitespace-nowrap"
                   >
                     {link.name}
                   </button>
                 ) : (
                   <Link 
                     to={link.path}
-                    className="hover:text-primary transition-colors duration-200 px-2 py-1 rounded text-xs sm:text-sm"
+                    className="hover:text-primary transition-colors duration-200 px-1.5 py-1 rounded text-xs whitespace-nowrap"
                   >
                     {link.name}
                   </Link>
                 )}
                 {index < legalLinks.length - 1 && (
-                  <Separator orientation="vertical" className="h-3 w-px bg-border/50" />
+                  <Separator orientation="vertical" className="h-3 w-px bg-border/50 hidden xs:block" />
                 )}
               </div>
             ))}
@@ -104,13 +104,15 @@ export const Footer = () => {
 
       {/* Rodapé inferior */}
       <div className="border-t border-border bg-muted/30">
-        <div className="container-responsive py-3 sm:py-4">
-          <div className="flex flex-col sm:flex-row items-center justify-between text-xs sm:text-sm text-muted-foreground gap-2">
-            <div className="text-center sm:text-left">
-              © {new Date().getFullYear()} 2Data Brasil. Todas as ferramentas são gratuitas e open source.
+        <div className="container-responsive py-3 sm:py-4 px-2">
+          <div className="flex flex-col items-center justify-center text-xs text-muted-foreground gap-1 text-center">
+            <div>
+              © {new Date().getFullYear()} 2Data Brasil. Todas as ferramentas gratuitas.
             </div>
-            <div className="flex items-center gap-2 sm:gap-4">
-              <span>Feito com ❤️ para desenvolvedores</span>
+            <div className="flex items-center gap-1">
+              <span>Feito com</span>
+              <span className="text-red-500">❤️</span>
+              <span>para desenvolvedores</span>
             </div>
           </div>
         </div>

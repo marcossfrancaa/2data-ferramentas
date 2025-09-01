@@ -2,7 +2,11 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { Star } from 'lucide-react';
 import { ShowcaseTool } from '@/lib/showcaseToolsData';
+import { useFavorites } from '@/contexts/FavoritesContext';
+import { cn } from '@/lib/utils';
 
 interface ToolCardProps {
   tool: ShowcaseTool;
@@ -122,36 +126,72 @@ const AnimatedDemo = ({ type, isHovered }: { type: string; isHovered: boolean })
 
 export const ToolCard = ({ tool }: ToolCardProps) => {
   const [isHovered, setIsHovered] = useState(false);
+  const { isFavorite, addFavorite, removeFavorite } = useFavorites();
+  
+  const isToolFavorite = isFavorite(tool.id);
+
+  const handleFavoriteClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    
+    if (isToolFavorite) {
+      removeFavorite(tool.id);
+    } else {
+      addFavorite(tool.id);
+    }
+  };
 
   return (
-    <Link to={tool.link} className="block">
-      <Card 
-        className="spacing-md hover-lift cursor-pointer group bg-gradient-card border-border/50 h-full overflow-hidden"
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
+    <div className="relative group">
+      <Link to={tool.link} className="block">
+        <Card 
+          className="p-3 sm:p-4 md:p-6 hover-lift cursor-pointer group bg-gradient-card border-border/50 h-full overflow-hidden"
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+        >
+          <div className="flex items-start gap-2 sm:gap-3 mb-2 sm:mb-3">
+            <div className={`p-1.5 sm:p-2 rounded-lg sm:rounded-xl bg-gradient-to-br ${tool.color} transition-all duration-300 ${
+              isHovered ? 'scale-110' : 'scale-100'
+            }`}>
+              <tool.icon className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
+            </div>
+            <div className="flex-1 min-w-0">
+              <Badge variant="outline" className="text-xs mb-1 sm:mb-2 border-primary/20 text-primary/70 px-1.5 py-0.5">
+                {tool.category}
+              </Badge>
+              <h3 className="font-semibold text-card-foreground text-xs sm:text-sm group-hover:text-primary transition-colors line-clamp-1">
+                {tool.title}
+              </h3>
+            </div>
+          </div>
+          
+          <p className="text-xs text-muted-foreground mb-2 sm:mb-3 line-clamp-2">
+            {tool.description}
+          </p>
+          
+          <AnimatedDemo type={tool.animationType} isHovered={isHovered} />
+        </Card>
+      </Link>
+      
+      {/* Botão de favorito */}
+      <Button
+        variant="ghost"
+        size="icon"
+        onClick={handleFavoriteClick}
+        className={cn(
+          "absolute top-2 right-2 h-8 w-8 opacity-0 group-hover:opacity-100 transition-all duration-200 hover:scale-110 z-10",
+          isToolFavorite && "opacity-100"
+        )}
       >
-        <div className="flex items-start gap-3 mb-3">
-          <div className={`p-2 rounded-xl bg-gradient-to-br ${tool.color} transition-all duration-300 ${
-            isHovered ? 'scale-110' : 'scale-100'
-          }`}>
-            <tool.icon className="w-5 h-5 text-white" />
-          </div>
-          <div className="flex-1 min-w-0">
-            <Badge variant="outline" className="text-xs mb-2 border-primary/20 text-primary/70">
-              {tool.category}
-            </Badge>
-            <h3 className="font-semibold text-card-foreground text-sm group-hover:text-primary transition-colors">
-              {tool.title}
-            </h3>
-          </div>
-        </div>
-        
-        <p className="text-xs text-muted-foreground mb-3 line-clamp-2">
-          {tool.description}
-        </p>
-        
-        <AnimatedDemo type={tool.animationType} isHovered={isHovered} />
-      </Card>
-    </Link>
+        <Star 
+          className={cn(
+            "h-4 w-4 transition-all duration-200",
+            isToolFavorite 
+              ? "fill-yellow-500 text-yellow-500" 
+              : "text-muted-foreground hover:text-yellow-500"
+          )} 
+        />
+      </Button>
+    </div>
   );
 };

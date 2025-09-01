@@ -370,7 +370,10 @@ export const ModernSidebar = ({
               variant="ghost"
               size="sm"
               onClick={isMobile ? onMobileClose : onToggleCollapse}
-              className="p-1 h-auto hover:bg-sidebar-accent"
+              className={cn(
+                "hover:bg-sidebar-accent touch-manipulation",
+                isMobile ? "p-2 h-auto min-w-[40px] min-h-[40px]" : "p-1 h-auto"
+              )}
             >
               {isMobile ? (
                 <X className="w-4 h-4" />
@@ -464,14 +467,21 @@ export const ModernSidebar = ({
                           <Button
                             variant="ghost"
                             className={cn(
-                              "w-full justify-start h-9 px-3 mb-1 hover:bg-sidebar-accent",
+                              "w-full justify-start h-9 px-3 mb-1 hover:bg-sidebar-accent hover:text-sidebar-foreground",
                               activeTool === tool.id && "bg-sidebar-primary text-sidebar-primary-foreground hover:bg-sidebar-primary/90",
                               isCollapsed && !isMobile && "justify-center px-0 mb-0"
                             )}
                           >
-                            <tool.icon className={cn("w-4 h-4 flex-shrink-0", (!isCollapsed || isMobile) && "mr-3")} />
+                            <tool.icon className={cn(
+                              "w-4 h-4 flex-shrink-0 text-sidebar-foreground", 
+                              (!isCollapsed || isMobile) && "mr-3",
+                              activeTool === tool.id && "text-sidebar-primary-foreground"
+                            )} />
                             {(!isCollapsed || isMobile) && (
-                              <span className="text-sm truncate">{tool.name}</span>
+                              <span className={cn(
+                                "text-sm truncate text-sidebar-foreground",
+                                activeTool === tool.id && "text-sidebar-primary-foreground"
+                              )}>{tool.name}</span>
                             )}
                           </Button>
                         </Link>

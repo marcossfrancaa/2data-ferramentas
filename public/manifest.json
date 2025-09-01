@@ -1,28 +1,118 @@
 {
-  "name": "2Data - Ferramentas Online",
-  "short_name": "2Data",
-  "description": "A melhor coleção de ferramentas online para desenvolvedores brasileiros",
+  "name": "2Data Brasil - Ferramentas Profissionais",
+  "short_name": "2Data Brasil",
+  "description": "Mais de 150 ferramentas profissionais para desenvolvedores e empresas brasileiras. CPF, CNPJ, CEP, validadores, geradores e muito mais.",
   "theme_color": "#3b82f6",
   "background_color": "#ffffff",
   "display": "standalone",
-  "orientation": "portrait",
+  "orientation": "any",
   "scope": "/",
   "start_url": "/",
+  "id": "2data-brasil-tools",
   "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicon.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicon.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicon.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicon.png",
+      "sizes": "152x152",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    },
     {
       "src": "/favicon.png",
       "sizes": "192x192",
       "type": "image/png",
-      "purpose": "maskable any"
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/favicon.png",
+      "sizes": "384x384",
+      "type": "image/png",
+      "purpose": "any"
     },
     {
       "src": "/favicon.png",
       "sizes": "512x512",
       "type": "image/png",
-      "purpose": "maskable any"
+      "purpose": "any maskable"
     }
   ],
-  "categories": ["productivity", "utilities", "developer"],
+  "categories": ["productivity", "utilities", "developer", "business", "finance"],
   "lang": "pt-BR",
-  "dir": "ltr"
+  "dir": "ltr",
+  "prefer_related_applications": false,
+  "display_override": ["window-controls-overlay", "standalone", "minimal-ui"],
+  "edge_side_panel": {
+    "preferred_width": 400
+  },
+  "launch_handler": {
+    "client_mode": "focus-existing"
+  },
+  "protocol_handlers": [
+    {
+      "protocol": "web+2data",
+      "url": "/ferramenta/%s"
+    }
+  ],
+  "handle_links": "preferred",
+  "related_applications": [
+    {
+      "platform": "webapp",
+      "url": "https://2data.com.br/manifest.json"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Gerador de CPF",
+      "short_name": "CPF",
+      "description": "Gerar CPF válido",
+      "url": "/ferramenta/cpf-generator",
+      "icons": [
+        {
+          "src": "/favicon.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Gerador de CNPJ",
+      "short_name": "CNPJ", 
+      "description": "Gerar CNPJ válido",
+      "url": "/ferramenta/cnpj-generator",
+      "icons": [
+        {
+          "src": "/favicon.png",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ]
 }
